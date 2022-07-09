@@ -19,7 +19,7 @@ Page({
         sysHeight: 0,
         loading: 0,
         autoplay:true,
-        showContact:1,
+        showContact:0,
     },
     onPageScroll: function (e) {
         let scrollTop = e.scrollTop;

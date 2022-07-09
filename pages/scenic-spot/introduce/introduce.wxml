@@ -1,0 +1,92 @@
+<view class="container">
+  <image class="back" bindtap="back" mode="widthFix" src="/images/icon/back.png"></image>
+  <!-- 媒体部分 -->
+  <view class="top">
+    <!-- 轮播图部分 -->
+    <view class='banner-wrap' wx:if="{{showBanner && banner.length > 0}}">
+      <swiper class="banner" autoplay="{{bannerAutoplay}}" interval="3000" duration="1000">
+        <swiper-item wx:for="{{banner}}" wx:key="id">
+          <image src="{{item.image_url}}" background-size="cover"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+    <!-- 视频 -->
+    <view class='intro-video' wx:if="{{showVideo}}">
+      <video src="{{video[0].image_url}}" controls="{{false}}" autoplay="{{videoAutoplay}}" loop="true" show-fullscreen-btn="{{false}}" show-play-btn="{{false}}" show-center-play-btn="{{false}}" enable-progress-gesture="{{false}}" object-fit="fill" show-bottom-progress="{{false}}"></video>
+    </view>
+    <!-- 控制按钮 -->
+    <view class="btn-box">
+      <button class="btn {{showVideo ? 'active' : ''}}" bindtap="changeShow">视频</button>
+      <button class="btn {{showBanner ? 'active' : ''}}" bindtap="changeShow">图片</button>
+    </view>
+  </view>
+
+  <!-- 内容区域 -->
+  <view class="content">
+    <!-- 标题区域 -->
+    <view class="titleBox">
+      <text class="title">药王谷</text>
+      <text class="fold" wx:if="{{!fold}}" bindtap="changeFold">展开 ↓</text>
+      <text class="fold" wx:if="{{fold}}" bindtap="changeFold">收起 ↑</text>
+    </view>
+    <!-- 描述标签 -->
+    <view class="describe">
+      <text class="describe-item">神山圣水</text>
+      <text class="describe-item">人间仙境</text>
+      <text class="describe-item">自然风光</text>
+      <text class="describe-item">沁人心脾</text>
+      <text>{{'\n'}}</text>
+    </view>
+    <!-- 描述内容 -->
+    <view class="describe-context {{fold? '' : 'describe-context-hide'}}">
+      数据库是开发商的师傅师傅说算法开始的份上很舒服沙发上方式水电费沙发上地方水电费所发生的的发顺丰水电费胜多负少的范德萨发算法打哈师大还是大的啊大海是的阿达函数的阿萨德啊阿萨德阿达阿达阿达安徽的啊安可达科技的
+    </view>
+
+    <!-- 景观列表 -->
+    <view class="landscape">
+      <view class="landscape-top">
+        <text class="title">风景一览</text>
+        <text class="fold" bindtap="toMore">更多 →</text>
+      </view>
+      <scroll-view scroll-x="true">
+        <view class="scroll-box">
+          <view class="thing" bindtap="goDetail" data-num="1">
+            <view class="img">
+              <image mode="widthFix" src="/images/spot/guidemap.jpg">
+              </image>
+            </view>
+            <view class="text">
+              五花海
+            </view>
+          </view>
+          <view class="thing" bindtap="goDetail" data-num="1">
+            <view class="img">
+              <image mode="widthFix" src="/images/spot/guidemap.jpg">
+              </image>
+            </view>
+            <view class="text">
+              五花海
+            </view>
+          </view>
+          <view class="thing" bindtap="goDetail" data-num="1">
+            <view class="img">
+              <image mode="widthFix" src="/images/spot/guidemap.jpg">
+              </image>
+            </view>
+            <view class="text">
+              五花海
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+
+    <!-- 底部大图 -->
+    <view class="bigImg">
+    <image src="/images/spot/guidemap.jpg" mode="widthFix"></image>
+    </view>
+  </view>
+
+
+
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Lists": "/components/Lists/Lists"
+  },
+  "navigationStyle": "custom"
+}

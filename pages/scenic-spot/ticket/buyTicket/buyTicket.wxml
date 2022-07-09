@@ -1,0 +1,49 @@
+<view class="big">
+  <van-steps steps="{{ steps }}" active="{{ active }}" active-icon="success" />
+  <!-- 添加游客 -->
+  <view class="box" wx:if="{{active == 1}}">
+    <view class="mes-box" wx:for="{{touristMes.length}}" wx:key="index">
+      <van-cell-group>
+        <van-field value="{{ value }}" label="姓名" placeholder="请输入用户名" border="{{ true }}" bind:blur="nameChange" data-index="{{index}}" />
+        <van-field value="{{ idnum }}" label="身份证号" placeholder="请输入身份证号" border="{{ true }}" bind:blur="idChange" data-index="{{index}}" />
+      </van-cell-group>
+      <view class="showPrice">
+        <view>门票价格</view>
+        <view class="right">¥{{price}}</view>
+      </view>
+    </view>
+    <button class="newpeople" bindtap="newpeople">新增游客信息</button>
+  </view>
+<!-- 订单信息确认 -->
+  <view class="confirmBox" wx:if="{{active == 2}}">
+    <view class="confirm-date">门票日期： {{'2022-07-09'}}</view>
+    <view class="confirm-mesbox" wx:for="{{3}}" wx:key="index">
+      <view class="confirm-top flrow">
+        <view class="confirm-name">{{'尹总'}}</view>
+        <van-tag round type="success" size="medium">{{'普通票'}}</van-tag>
+      </view>
+      <view class="confirm-down flrow">
+        <view class="confirm-idCard">身份证 {{'5646464646546'}}</view>
+        <view class="confirm-price">￥ {{'56'}}.00</view>
+      </view>
+    </view>
+    <view class="confirm-total flrow">
+    <view>共计： </view>
+    <view class="total-price">￥ {{'72'}}.00</view>
+    </view>
+  </view>
+<!-- 支付页面 -->
+<view class="payBox" wx:if="{{active == 3}}">
+    <view class="pay-time">订单将在{{'15分07秒'}}后失效</view>
+    <view class="pay">
+      <view class="wxpay">微信支付</view>
+      <view class="paymoney">￥ {{72}}.00</view>
+    </view>
+   
+  </view>
+  <!-- 按钮部分 -->
+  <button class="back" bindtap="back" disabled="{{active < 1}}">上一步</button>
+  <button class="next" bindtap="next" wx:if="{{active == 1}}">下一步</button>
+  <button class="next" bindtap="next" wx:if="{{active == 2}}">确认订单并结算</button>
+  <button class="next" bindtap="next" wx:if="{{active == 3}}">支付</button>
+</view>

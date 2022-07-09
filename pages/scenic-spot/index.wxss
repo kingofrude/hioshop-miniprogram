@@ -1,0 +1,149 @@
+/* 数据加载中样式 */
+.loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.loading .img {
+  width: 90rpx;
+  height: 90rpx;
+}
+.loading .text {
+  margin-top: 20rpx;
+  width: 100%;
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+}
+/* 大盒子背景 */
+.container {
+  background-color: #fff;
+  min-height: 100%;
+  align-items: stretch;
+  overflow-x: hidden;
+  position: relative;
+}
+/* 轮播图样式 */
+.banner-wrap {
+  width: 100%;
+  height: 440rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.banner {
+  width: 750rpx;
+  height: 440rpx;
+}
+
+.banner image {
+  width: 100%;
+  height: 440rpx;
+}
+/* 轮播图 */
+.indexSwiper {
+  width: 100%;
+}
+.indexSwiper image {
+  width: 100%;
+}
+/* 页面主要内容 */
+.index_main{
+  width: 100%;
+  background: linear-gradient(aquamarine, #fff, #fff);
+  border-radius: 20rpx 20rpx 0 0
+}
+/* 小程序各个功能 */
+.index_main_func {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20rpx;
+}
+.index_main_func navigator {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  box-sizing: border-box;
+  align-items: center;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  font-size: 30rpx;
+  font-family: '楷体';
+}
+.index_main_func navigator image {
+  width: 100rpx;
+  height: 100rpx!important;
+  border-radius: 50%;
+}
+/* 景区导览图 */
+.index_main_map {
+  position: relative;
+  padding: 0 10rpx;
+  margin-bottom: -10rpx;
+}
+.index_main_map image {
+  width: 100%;
+  border-radius: 30rpx;
+}
+.index_main_map_bottom_text {
+  position: absolute;
+  width: 200rpx;
+  height: 50rpx;
+  background-color: rgba(115, 253, 223, .5);
+  color: #fff;
+  text-align: center;
+  line-height: 50rpx;
+  left: 50%;
+  bottom: 60rpx;
+  transform: translateX(-50%);
+  border-radius: 20rpx;
+  font-family: '楷体';
+}
+.index_main_map_top_text {
+  position: absolute;
+  font-size: 70rpx;
+  font-family: '楷体';
+  color: #fff;
+  left: 50%;
+  top: 20rpx;
+  transform: translateX(-50%);
+}
+/* 底部推荐模块 */
+.index_footer {
+  width: 100%;
+  background: linear-gradient(#b4facf, #fff);
+  padding: 40rpx 0;
+}
+/* 景区最新公告 */
+.index_footer_notice {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 80rpx;
+  padding: 0 40rpx;
+  font-size: 26rpx;
+  margin-bottom: 60rpx;
+  overflow: hidden;
+}
+.index_footer_notice_left text:first-child {
+  color: red;
+}
+.index_footer_notice_left {
+  margin-right: 20rpx;
+}
+.index_footer_notice_middle {
+  width: 350rpx;
+  overflow: hidden;
+}
+.notice-wrap {
+  height: 80rpx;
+}

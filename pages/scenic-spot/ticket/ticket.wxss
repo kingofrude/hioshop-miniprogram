@@ -1,0 +1,23 @@
+/* 日期样式 */
+.calendar {
+  --calendar-height: 400px;
+}
+.box {
+  padding: 20rpx;
+}
+.restBox {
+  margin-top: 60rpx;
+  background-color: #eee;
+  overflow: hidden;
+}
+.boxTitle {
+  padding: 20rpx;
+  display: block;
+}
+.rest {
+  border: 1rpx solid #aaa;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}

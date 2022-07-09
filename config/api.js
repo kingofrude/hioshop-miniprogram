@@ -1,6 +1,6 @@
-// const ApiRootUrl = 'http://localhost:8360/api/';
+const ApiRootUrl = 'http://localhost:8360/api/';
 // const ApiRootUrl = 'http://192.168.0.108:8360/api/';
-const ApiRootUrl = 'https://www.guxiaoling.com:8466/api/';
+// const ApiRootUrl = 'https://www.guxiaoling.com:8466/api/';
 
 module.exports = {
     // 登录
@@ -53,5 +53,7 @@ module.exports = {
     SaveSettings: ApiRootUrl + 'settings/save',
     SettingsDetail: ApiRootUrl + 'settings/userDetail',
     GetBase64: ApiRootUrl + 'qrcode/getBase64', //获取商品详情二维码
+    getBanner: ApiRootUrl + 'spot/getBanner', // 获取首页轮播图
+    getIntroduce: ApiRootUrl + 'introduce/getIntroduce', // 获取介绍页数据
 
 };

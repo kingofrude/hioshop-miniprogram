@@ -1,0 +1,166 @@
+.top {
+  position: relative;
+  height: 440rpx;
+}
+.back {
+  position: absolute;
+  width: 40rpx;
+  z-index: 1;
+  top: 55rpx;
+  left: 30rpx;
+}
+/* 轮播图样式 */
+.banner-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 440rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.banner {
+  width: 750rpx;
+  height: 440rpx;
+}
+
+.banner image {
+  width: 100%;
+  height: 440rpx;
+}
+
+/* 视频样式 */
+.intro-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 440rpx;
+  width: 100%;
+}
+
+.intro-video video {
+  height: 440rpx;
+  width: 100%;
+}
+
+/* 切换按钮图标 */
+.btn-box {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 260rpx;
+  left: 50%;
+  bottom: 30rpx;
+  transform: translate(-50%, -50%);
+}
+
+.btn {
+  font-size: 22rpx;
+  width: 100rpx;
+  height: 50rpx;
+  border-radius: 50rpx;
+}
+
+.active {
+  background-color: rgb(190, 190, 60);
+}
+
+/* 内容区域 */
+.content {
+  margin-top: -20rpx;
+  padding: 20rpx;
+  border-radius: 20rpx 20rpx 0 0;
+  background: linear-gradient(#b4facf, #eee, #eee);
+  z-index: 1;
+}
+
+/* 标题区域 */
+.titleBox {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 标题样式 */
+.title {
+  font-size: large;
+  font-weight: 700;
+  font-family: '黑体';
+}
+
+.fold {
+  font-size: small;
+  line-height: 48rpx;
+  color: #555;
+}
+
+.describe {
+  margin-top: 10rpx;
+}
+
+.describe-item {
+  float: left;
+  width: 110rpx;
+  height: 40rpx;
+  font-size: 18rpx;
+  text-align: center;
+  line-height: 40rpx;
+  background-color: #06fd65;
+  margin-right: 5rpx;
+  color: #fff;
+}
+
+.describe-context {
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  color: #555;
+}
+
+.describe-context-hide {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/* 景观列表 */
+.landscape {
+  margin-top: 30rpx;
+}
+.landscape-top {
+  display: flex;
+  justify-content: space-between;
+}
+.thing {
+  width: 350rpx;
+  float: left;
+  margin-right: 10rpx;
+}
+.img {
+  width: 100%;
+  background-color: rgb(193, 246, 247);
+}
+image {
+  width: 100%;
+}
+.text {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-weight: 700;
+  background-color: rgb(193, 246, 247);
+}
+scroll-view {
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+  height: 336rpx;
+}
+.scroll-box{
+  overflow: hidden;
+  width: 10000rpx;
+}
+.bigImg{
+  display: flex;
+  padding-top: 20rpx;
+}

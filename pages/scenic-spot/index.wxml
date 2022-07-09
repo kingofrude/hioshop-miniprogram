@@ -1,0 +1,73 @@
+<view class="container" wx:if="{{loading == 1}}">
+  <!-- 轮播图部分 -->
+  <view class='banner-wrap' wx:if="{{showBanner && banner.length > 0}}">
+    <swiper class="banner" indicator-dots="true" autoplay="{{autoplay}}" interval="3000" duration="1000">
+      <swiper-item wx:for="{{banner}}" wx:key="id">
+          <image src="{{item.image_url}}" background-size="cover"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+<!-- 页面主要内容 -->
+<view class="index_main">
+  <!-- 小程序各个功能 -->
+  <view class="index_main_func">
+      <!-- 导航去景点介绍页面 -->
+      <navigator url="/pages/scenic-spot/introduce/introduce" open-type="navigate">
+      <view>
+        <image src="../../images/nav/icon-cart-b.png" mode="widthFix"></image>
+      </view>
+      <text>药王谷</text>
+    </navigator>
+  <!-- 导航去特色商城页面 -->
+    <navigator url="/pages/index/index" open-type="navigate">
+      <view>
+        <image src="../../images/nav/icon-cart-b.png" mode="widthFix"></image>
+      </view>
+      <text>特产商城</text>
+    </navigator>
+
+    <!-- 导航去景区购票页面 -->
+    <navigator url="/pages/scenic-spot/ticket/ticket">
+      <view>
+        <image src="../../images/spot/guidemap.jpg" mode="widthFix"></image>
+      </view>
+      <text>景区购票</text>
+    </navigator>
+  </view>
+  <!-- 景点导览图 -->
+  <navigator url="/pages/scenic-spot/guideMap/guideMap" open-type="navigate" class="index_main_map">
+    <image src="../../images/spot/guidemap.jpg"></image>
+    <text class="index_main_map_top_text">景区导览图</text>
+    <text class="index_main_map_bottom_text">点击进入</text>
+  </navigator>
+</view>
+<!-- 底部推荐模块 -->
+<view class="index_footer">
+  <!-- 景区最新公告 -->
+  <view class="index_footer_notice">
+    <view class="index_footer_notice_left">
+      <text>最新</text>
+      <text>公告</text>
+    </view>
+    <view class="index_footer_notice_middle">
+      <swiper vertical="{{true}}" indicator-dots="{{false}}" autoplay="{{autoplay}}" interval="2000" duration="1000" class="notice-wrap" circular easing-function="easeInOutCubic">
+        <swiper-item wx:for="{{notice}}" wx:key="id">
+        <view class="notice-text">{{item.context}}</view>
+        </swiper-item>
+      </swiper>
+    </view>
+    <view class="index_footer_notice_right">
+      <navigator url="/pages/scenic-spot/notice/notice" open-type="switchTab"><text>更多 ></text></navigator>
+    </view>
+  </view>
+  <!-- 景区特色展示 -->
+  <van-tabs active="{{ active }}" bind:change="onChange" sticky animated swipeable>
+  <van-tab title="热门推荐"><Lists/></van-tab>
+  <van-tab title="主要景点"><Lists/></van-tab>
+</van-tabs>
+</view>
+</view>
+<view class="loading" style="height:{{sysHeight}}px" wx:else>
+  <image class="img" src="/images/icon/loading.gif"></image>
+  <view class="text">数据加载中</view>
+</view>

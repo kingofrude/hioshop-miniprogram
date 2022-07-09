@@ -1,0 +1,15 @@
+<van-calendar title="景区购票" poppable="{{ false }}" show-confirm="{{ false }}" class="calendar" min-date="{{ minDate }}"
+  max-date="{{ maxDate }}" bind:select="showConfirm" />
+<van-popup show="{{ show }}" position="bottom" closeable close-icon="close" round bind:close="onClose">
+  <view class="box">
+    <view class="restBox">
+    <text class="boxTitle">剩余票量</text>
+    <view class="rest">
+      <view>普通票{{price}}元每张</view>
+      <view>余：<text class="onePrice">{{rest}}</text></view>
+    </view>
+  </view>
+  <van-button type="primary" block disabled="{{rest <= 1}}"  bind:click="buy">个人购票</van-button>
+  </view>
+  
+</van-popup>

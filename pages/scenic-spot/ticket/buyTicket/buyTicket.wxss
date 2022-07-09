@@ -1,0 +1,120 @@
+/* pages/ticket/buyTicket/buyTicket.wxss */
+/* 页面大盒子 */
+.big {
+  background-color: #eee;
+  margin-bottom: 100rpx;
+}
+/* 表单盒子 */
+.box {
+  padding: 0 10rpx 20rpx 10rpx;
+  border-radius: 20rpx;
+}
+.mes-box {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.showPrice{
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx;
+  font-size: 28rpx;
+  color: #666;
+  background-color: #fff;
+}
+.showPrice .right {
+  color: rgb(36, 148, 109);
+  font-size: 34rpx;
+}
+
+/* 按钮 */
+.next {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 50%;
+  color: rgb(36, 148, 109);
+  font-size: 30rpx;
+}
+.back {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  color: rgb(36, 148, 109);
+  font-size: 30rpx;
+}
+.newpeople {
+  width: 100%;
+  color: rgb(36, 148, 109);
+  font-size: 30rpx;
+}
+
+/* 确认盒子 */
+.confirmBox {
+  padding: 10rpx;
+}
+.confirm-date {
+  font-size: 28rpx;
+  height: 60rpx;
+  margin-bottom: 10rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding-left: 10rpx;
+  line-height: 60rpx;
+}
+.confirm-mesbox {
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx;
+}
+.flrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 0 20rpx;
+}
+.confirm-name {
+  font-weight: 700;
+}
+.confirm-idCard {
+  font-size: 26rpx;
+}
+.confirm-price {
+  font-weight: 700;
+}
+.total-price {
+  font-weight: 700;
+  color: rgb(45, 206, 45);
+}
+/* 支付盒子 */
+.payBox {
+  padding: 10rpx;
+  font-size: 32rpx;
+}
+.pay {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+}
+.pay-time {
+  font-size: 26rpx;
+  padding: 0 20rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-bottom: 10rpx;
+}
+.wxpay {
+  font-size: 28rpx;
+}
+.paymoney {
+  font-weight: 700;
+}
