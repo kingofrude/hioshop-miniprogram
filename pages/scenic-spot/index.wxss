@@ -115,7 +115,7 @@
 /* 底部推荐模块 */
 .index_footer {
   width: 100%;
-  background: linear-gradient(#b4facf, #fff);
+  background: linear-gradient(#b4facf, #eee);
   padding: 40rpx 0;
 }
 /* 景区最新公告 */
@@ -146,4 +146,7 @@
 }
 .notice-wrap {
   height: 80rpx;
+}
+.notice-text {
+  font-size: 22rpx;
 }

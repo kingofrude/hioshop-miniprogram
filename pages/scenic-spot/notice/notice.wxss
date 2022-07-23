@@ -1,1 +1,27 @@
-/* pages/scenic-spot/notice/notice.wxss */
+/* pages/notice/notice.wxss */
+.notice {
+  margin: 30rpx auto;
+  width: 650rpx;
+  padding: 30rpx;
+  box-shadow: 0rpx 10rpx 10rpx #ccc;
+  border-radius: 20rpx;
+  border-top: 5rpx solid #ccc;
+}
+.title {
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+.date {
+  font-size: 24rpx;
+  color: #555;
+  position: relative;
+}
+.over {
+  font-size: smaller;
+  position: absolute;
+  top: 30rpx;
+  right: 40rpx;
+}
+.cover {
+  background-color: #ddd;
+}

@@ -14,6 +14,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/scenic-spot/notice/detailNotice/detailNotice",
+          "query": "id=8",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

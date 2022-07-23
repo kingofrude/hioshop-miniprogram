@@ -1,0 +1,13 @@
+<view class="box">
+  <view class="title">{{notice.title}}</view>
+<view class="date">{{notice.start_time}}</view>
+<view class="allmes">
+  <view class="detail">
+    <import src="../../../../lib/wxParse/wxParse.wxml" />
+    <template is="wxParse" data="{{wxParseData:goodsDetail.nodes}}" />
+  </view>
+</view>
+<view class="end-time">通知有效日期至： {{notice.end_time}}</view>
+</view>
+
+

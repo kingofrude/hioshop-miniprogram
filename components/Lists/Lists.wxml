@@ -1,11 +1,11 @@
 <view class="box">
-  <view class="thing" bindtap="goDetail" data-num="1">
+  <view class="thing" bindtap="goDetail" data-num="{{item.id}}" data-title="{{item.title}}" wx:for="{{scenic}}" wx:key="id">
     <view class="img">
-    <image mode="widthFix" src="/images/spot/guidemap.jpg">
+    <image mode="widthFix" src="{{item.image_url}}">
     </image>
     </view>
     <view class="text">
-    五花海
+    {{item.title}}
     </view>
   </view>
 </view>

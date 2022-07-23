@@ -1,14 +1,19 @@
 .box {
   margin-top: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .thing {
-  width: 350rpx;
+  width: 45%;
   padding: 10rpx;
   float: left;
+  background-color: #b4facf;
+  margin-bottom: 10rpx;
+  box-shadow: 10rpx 10rpx 5rpx #ccc;
 }
 .img {
   width: 100%;
-  background-color: rgb(193, 246, 247);
 }
 image {
   width: 100%;
@@ -18,5 +23,4 @@ image {
   height: 60rpx;
   line-height: 60rpx;
   font-weight: 700;
-  background-color: rgb(193, 246, 247);
 }

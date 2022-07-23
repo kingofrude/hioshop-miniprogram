@@ -54,6 +54,11 @@ module.exports = {
     SettingsDetail: ApiRootUrl + 'settings/userDetail',
     GetBase64: ApiRootUrl + 'qrcode/getBase64', //获取商品详情二维码
     getBanner: ApiRootUrl + 'spot/getBanner', // 获取首页轮播图
+    getIndexNotice: ApiRootUrl + 'spot/getIndexNotice', // 获取通知
+    getIndexTabScenic: ApiRootUrl + 'spot/getIndexTabScenic', // 获取tab栏景点数据
     getIntroduce: ApiRootUrl + 'introduce/getIntroduce', // 获取介绍页数据
-
+    getNotice: ApiRootUrl + 'spot/getNotice', // 获取notice页面数据
+    getNoticeAll: ApiRootUrl + 'spot/getNoticeAll',
+    // 获取景点详细信息
+    getScenicAll: ApiRootUrl + 'spot/getScenicAll',
 };

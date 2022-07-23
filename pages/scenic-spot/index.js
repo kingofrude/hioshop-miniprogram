@@ -9,35 +9,18 @@ Page({
     banner: [],
     sysHeight: 0,
     active: 0,
-    notice: [{
-      id: 1,
-      context: 111111111
-    }, {
-      id: 2,
-      context: 2222222
-    }, {
-      id: 3,
-      context: '333333333333333333333333333333333333333333333333333333333333'
-    }]
+    notice: [],
+    scenic: [],
+    hotScenic: []
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad(options) {
     this.getSpotShowInfo()
+    this.getNotice()
+    this.getIndexTabScenic()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady() {
 
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow() {
     var that = this;
     let userInfo = wx.getStorageSync('userInfo');
@@ -53,38 +36,18 @@ Page({
       autoplay: true
     });
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
   onHide() {
 
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
   onUnload() {
 
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
   onPullDownRefresh() {
 
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
   onReachBottom() {
 
   },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage() {
 
   },
@@ -101,11 +64,33 @@ Page({
       }
     });
   },
+  getNotice: function(){
+    let that = this
+    util.request(api.getIndexNotice).then(function (res) {
+      if (res.errno === 0) {
+        let notice = res.data;
+        that.setData({
+          notice
+        });
+      }
+    });
+  },
+  getIndexTabScenic: function() {
+    let that = this;
+    util.request(api.getIndexTabScenic).then(function (res) {
+      if (res.errno === 0) {
+        let hotScenic = res.data.filter((item)=>item.ishot == 1);
+        that.setData({
+          scenic: res.data,
+          hotScenic
+        })
+      }
+    });
+  },
   onChange(event) {
     wx.showToast({
       title: `切换到 ${event.detail.title}`,
       icon: 'none',
     });
   },
-
 })

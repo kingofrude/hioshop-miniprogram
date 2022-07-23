@@ -27,7 +27,13 @@
     </navigator>
 
     <!-- 导航去景区购票页面 -->
-    <navigator url="/pages/scenic-spot/ticket/ticket">
+    <!-- <navigator target="miniProgram"	app-id="wxde8ac0a21135c07d" path="ticket/mpvue-pages/pages/poi/poi.html?poiId=1494003707">
+      <view>
+        <image src="../../images/spot/guidemap.jpg" mode="widthFix"></image>
+      </view>
+      <text>景区购票</text>
+    </navigator> -->
+    <navigator target="miniProgram"	short-link="#小程序://美团团购丨优选外卖单车美食酒店/eCFNKsFueOV7AEh">
       <view>
         <image src="../../images/spot/guidemap.jpg" mode="widthFix"></image>
       </view>
@@ -51,19 +57,19 @@
     </view>
     <view class="index_footer_notice_middle">
       <swiper vertical="{{true}}" indicator-dots="{{false}}" autoplay="{{autoplay}}" interval="2000" duration="1000" class="notice-wrap" circular easing-function="easeInOutCubic">
-        <swiper-item wx:for="{{notice}}" wx:key="id">
-        <view class="notice-text">{{item.context}}</view>
+        <swiper-item wx:for="{{notice}}" wx:key="index">
+        <view class="notice-text">{{item.title}}</view>
         </swiper-item>
       </swiper>
     </view>
     <view class="index_footer_notice_right">
-      <navigator url="/pages/scenic-spot/notice/notice" open-type="switchTab"><text>更多 ></text></navigator>
+      <navigator url="/pages/scenic-spot/notice/notice"><text>更多 ></text></navigator>
     </view>
   </view>
   <!-- 景区特色展示 -->
   <van-tabs active="{{ active }}" bind:change="onChange" sticky animated swipeable>
-  <van-tab title="热门推荐"><Lists/></van-tab>
-  <van-tab title="主要景点"><Lists/></van-tab>
+  <van-tab title="热门推荐"><Lists scenic="{{hotScenic}}" /></van-tab>
+  <van-tab title="主要景点"><Lists scenic="{{scenic}}" /></van-tab>
 </van-tabs>
 </view>
 </view>

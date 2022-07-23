@@ -46,35 +46,16 @@
     <view class="landscape">
       <view class="landscape-top">
         <text class="title">风景一览</text>
-        <text class="fold" bindtap="toMore">更多 →</text>
       </view>
       <scroll-view scroll-x="true">
-        <view class="scroll-box">
-          <view class="thing" bindtap="goDetail" data-num="1">
+        <view class="scroll-box" style="width: {{scenic.length*360 + 'rpx'}}">
+          <view class="thing" bindtap="goDetail" data-num="{{item.id}}" data-title="{{item.title}}" wx:for="{{scenic}}" wx:key="id">
             <view class="img">
-              <image mode="widthFix" src="/images/spot/guidemap.jpg">
+              <image mode="scaleToFill" src="{{item.image_url}}">
               </image>
             </view>
             <view class="text">
-              五花海
-            </view>
-          </view>
-          <view class="thing" bindtap="goDetail" data-num="1">
-            <view class="img">
-              <image mode="widthFix" src="/images/spot/guidemap.jpg">
-              </image>
-            </view>
-            <view class="text">
-              五花海
-            </view>
-          </view>
-          <view class="thing" bindtap="goDetail" data-num="1">
-            <view class="img">
-              <image mode="widthFix" src="/images/spot/guidemap.jpg">
-              </image>
-            </view>
-            <view class="text">
-              五花海
+              {{item.title}}
             </view>
           </view>
         </view>

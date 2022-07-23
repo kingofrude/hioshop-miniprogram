@@ -1,2 +1,7 @@
-<!--pages/scenic-spot/notice/notice.wxml-->
-<text>pages/scenic-spot/notice/notice.wxml</text>
+<view class="box">
+  <view class="notice {{item.show ? '' : 'cover'}}" bindtap="detailNotice" data-id="{{item.id}}" data-show="{{item.show}}" wx:for="{{notice}}" wx:key="id">
+  <view class="title">{{item.title}}</view>
+  <view class="date">{{item.start_time}}<view class="over" wx:if="{{!item.show}}">已过期</view></view>
+  
+</view>
+</view>

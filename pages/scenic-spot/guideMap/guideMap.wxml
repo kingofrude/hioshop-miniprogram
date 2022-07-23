@@ -1,2 +1,3 @@
-<!--pages/scenic-spot/guideMap/guideMap.wxml-->
-<text>pages/scenic-spot/guideMap/guideMap.wxml</text>
+<view class="img">
+    <image mode="widthFix" src="/images/spot/guidemap.jpg"></image>
+  </view>

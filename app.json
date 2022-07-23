@@ -23,10 +23,11 @@
     "pages/payOffline/index",
     "pages/scenic-spot/introduce/introduce",
     "pages/scenic-spot/notice/notice",
+    "pages/scenic-spot/notice/detailNotice/detailNotice",
     "pages/scenic-spot/guideMap/guideMap",
-    "pages/scenic-spot/travel-notes/index",
     "pages/scenic-spot/ticket/ticket",
-    "pages/scenic-spot/ticket/buyTicket/buyTicket"
+    "pages/scenic-spot/ticket/buyTicket/buyTicket",
+    "pages/scenic-spot/scenicDetail/scenicDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

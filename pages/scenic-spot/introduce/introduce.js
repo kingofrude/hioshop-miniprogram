@@ -13,8 +13,14 @@ Page({
     banner: [],
     video: [],
     fold: false,
+    scenic: [],
+    hotScenic: []
   },
-
+  goDetail(e){
+    wx.navigateTo({
+      url: `/pages/scenic-spot/scenicDetail/scenicDetail?id=${e.currentTarget.dataset.num}&&title=${e.currentTarget.dataset.title}`,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -84,6 +90,15 @@ Page({
           loading: 1,
           bannerAutoplay: true,
         });
+      }
+    });
+    util.request(api.getIndexTabScenic).then(function (res) {
+      if (res.errno === 0) {
+        let hotScenic = res.data.filter((item)=>item.ishot == 1);
+        that.setData({
+          scenic: res.data,
+          hotScenic
+        })
       }
     });
   },
